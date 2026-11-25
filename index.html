@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>GasConnect - Cylinder Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🔥 GasConnect</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#booking">Book Cylinder</a>
+        <a href="#history">History</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Online Gas Cylinder Booking</h1>
+    <p>Book your LPG cylinder easily and quickly.</p>
+    <a href="#booking" class="btn">Book Now</a>
+</section>
+
+<section class="container">
+    <h2>Dashboard</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Bookings</h3>
+            <p id="total">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending Bookings</h3>
+            <p id="pending">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Gas Cylinder</h3>
+            <p>14.2 KG</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="booking">
+    <h2>Book Your Cylinder</h2>
+
+    <form id="bookingForm">
+
+        <label>Customer Name</label>
+        <input type="text" id="name"
+               placeholder="Enter your name" required>
+
+        <label>Mobile Number</label>
+        <input type="tel" id="mobile"
+               pattern="[0-9]{10}"
+               placeholder="10 digit mobile number"
+               required>
+
+        <label>Customer Address</label>
+        <textarea id="address"
+                  placeholder="Enter delivery address"
+                  required></textarea>
+
+        <label>Gas Provider</label>
+        <select id="provider" required>
+            <option value="">Select Provider</option>
+            <option>Indane Gas</option>
+            <option>Bharat Gas</option>
+            <option>HP Gas</option>
+        </select>
+
+        <label>Cylinder Type</label>
+        <select id="cylinder">
+            <option>Domestic 14.2 KG</option>
+            <option>Commercial 19 KG</option>
+        </select>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<section class="container" id="history">
+    <h2>Booking History</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Name</th>
+                    <th>Provider</th>
+                    <th>Cylinder</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="bookingList"></tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 GasConnect | Cylinder Booking Application</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
